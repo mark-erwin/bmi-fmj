@@ -10,7 +10,6 @@ frontalface = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 if not os.path.exists("./captures"):
     os.mkdir("./captures")
 
-
 def detect_face(img):
     coord = frontalface.detectMultiScale(img, minNeighbors=7)
     for (x,y,w,h) in coord:
